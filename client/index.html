@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video2Text</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-b6shLFVvSdnF+mqbEs9pX00lUaGFU/ftn324KQl9iQudRP82LPgAvX8ZUBKbjDgq09NdXBJ+ci6/1zbN1hw1bw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto p-4">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold mb-2">Video2Text</h1>
+      <p class="text-gray-700">Upload an audio/video file or provide a link to transcribe it into text.</p>
+    </header>
+
+    <section class="bg-white rounded shadow p-6 mb-8">
+      <h2 class="text-xl font-semibold mb-4"><i class="fa-solid fa-file-arrow-up mr-2"></i>Upload File</h2>
+      <form id="uploadForm" class="space-y-4">
+        <input type="file" name="file" class="border rounded p-2 w-full" accept="audio/*,video/*" required>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white rounded px-4 py-2">
+          <i class="fa-solid fa-cloud-arrow-up mr-1"></i>Upload & Transcribe
+        </button>
+      </form>
+      <pre id="uploadResult" class="bg-gray-100 p-2 mt-4 whitespace-pre-wrap"></pre>
+    </section>
+
+    <section class="bg-white rounded shadow p-6">
+      <h2 class="text-xl font-semibold mb-4"><i class="fa-solid fa-link mr-2"></i>Transcribe from Link</h2>
+      <form id="linkForm" class="space-y-4">
+        <input type="url" name="url" class="border rounded p-2 w-full" placeholder="https://example.com/audio.mp3" required>
+        <button type="submit" class="bg-green-500 hover:bg-green-600 text-white rounded px-4 py-2">
+          <i class="fa-solid fa-play mr-1"></i>Transcribe URL
+        </button>
+      </form>
+      <pre id="linkResult" class="bg-gray-100 p-2 mt-4 whitespace-pre-wrap"></pre>
+    </section>
+
+    <footer class="text-center mt-8 text-gray-500">
+      <p>Made with <i class="fa-solid fa-heart text-red-500"></i> for demo purposes.</p>
+      <img class="mx-auto mt-4 rounded" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Ocean view" width="300">
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

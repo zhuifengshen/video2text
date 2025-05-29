@@ -1,0 +1,14 @@
+{
+  "name": "video2text",
+  "version": "1.0.0",
+  "description": "Simple audio/video to text converter web app",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": ["video", "audio", "transcription"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
